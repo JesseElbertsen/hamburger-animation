@@ -17,3 +17,28 @@ button {
   border: 10px solid var(--button-color, black);
   border-radius: 1rem;
 }
+
+button .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+button:hover .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+button:hover :is(.top, .bottom) {
+  y: 45;
+}
+
+button:hover .top {
+  rotate: 45deg;
+}
+button:hover .middle {
+  opacity: 0;
+}
+button:hover .bottom {
+  rotate: -45deg;
+}
+
+button[aria-expanded="true"] .top {
+}
