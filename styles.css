@@ -1,0 +1,19 @@
+:root {
+  --button-color: #333;
+}
+
+body {
+  width: 100vw;
+  height: 100dvh;
+  background: hsl(48, 18%, 83%);
+  margin: 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background: transparent;
+  border: 10px solid var(--button-color, black);
+  border-radius: 1rem;
+}
